@@ -1,0 +1,118 @@
+
+let mapleader=" "
+" ---------------------------------------------------- Plugins ------------------------------------------------------- "
+set surround
+set NERDTree
+set which-key
+set easymotion
+set commentary
+" ----------------------------------------------- Options for plugins ------------------------------------------------ "
+
+" ----------------------------------------------- Easymotion
+
+map q <leader><leader>s 
+
+" ---------------------------------------------- Which-key
+let g:WhichKey_ShowIntentionActions = "true"
+
+" ------------------------------------------------- Vim settings ----------------------------------------------------- "
+
+" Show line numbers
+set nu
+
+" Show current vim mode
+set showmode
+
+" ---------------------------------------------- Normal mode keymaps ------------------------------------------------- "
+
+" Keymaps for vim in Normal mode
+
+" ---------------------------------------------- General
+
+" Format code"
+nnoremap <leader>fc :action ReformatCode <CR>
+
+" Code action
+nnoremap <leader>ga :action ShowIntentionActions  <CR>
+
+" Create new line below cursor without leaving normal mode
+nnoremap <leader>o o<Esc>
+
+" Create newline above cursor without leaving normal mode
+nnoremap <leader>O O<Esc>
+
+" ------------------------------------------------- Documentation
+
+" Quick implementation
+nnoremap <leader>qi :action QuickImplementation <CR>
+
+" Quick javadoc
+nnoremap <leader>jd :action QuickJavaDoc <CR>
+
+" -------------------------------------------------- File movement
+
+" Find word in file
+nnoremap <leader>/ :action Find <CR>
+
+" Goto test for class
+nnoremap <leader>fo :action GotoTest <CR> 
+
+" Find and go to file
+nnoremap <leader>ff :action GotoFile <CR>
+
+" ------------------------------------------------- Runners and tests
+
+" Code run
+nnoremap <leader>mm :action Run <CR>
+
+" ------------------------------------------------- Tabs Management
+
+" Close current tab
+nnoremap <leader>tc :action CloseActiveTab <CR>
+
+" ReOpen closed tab"
+nnoremap <leader>ta :action ReopenClosedTab <CR>
+
+" Close all tabs except current
+nnoremap <leader>tqq :action CloseAllEditorsButActive <CR>
+
+" Goto left split
+nnoremap <S-Tab> :action PreviousTab <CR>
+
+"Goto right split
+nnoremap <Tab> :action NextTab <CR>
+
+" ----------------------------------------------- Window Management"
+
+" Vertical Split
+nnoremap <leader>wv :action SplitVertically <CR>
+
+" Close current split
+nnoremap <leader>wc :action Unsplit <CR>
+
+" Close all splits
+nnoremap <leader>waa :action UnsplitAll <CR>
+
+" Goto right split
+nnoremap <leader>wh :action PrevSplitter <CR>
+
+" Goto left split
+nnoremap <leader>wl :action NextSplitter <CR>
+
+" -------------------------------------------------- NERDTree"
+
+" File Explorer
+nnoremap <leader>fee :NERDTreeToggle <CR>
+
+" Close file explorer
+nnoremap <leader>fec :NERDTreeClose <CR>
+
+
+" ----------------------------------------------- Visual mode keymaps ------------------------------------------------ "
+
+xnoremap <leader>r :action RefactoringMenu <CR>
+
+" ------------------------------------------------- Insert mode keymaps ---------------------------------------------- "
+
+" Complete statement
+inoremap <tab> <esc>:action HippieCompletion <CR>
